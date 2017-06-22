@@ -5,12 +5,12 @@
 
 上面这段话，是官网对iOS11新特性的总结：
 
-*  *CoreML*，机器学习库
-*  *ARKit*，增强现实
-*  *drag and drop for iPad*，拖拽实现
-*  *new File app*， 文档app
-*  *camera API*， 新相机API
-*  *camera API*， 新相机API
+*  **CoreML**，机器学习库
+*  **ARKit**，增强现实
+*  **Drag and drop for iPad**，拖拽实现
+*  **New File app**， 文档app
+*  **Camera API update**， 新相机API
+*  **Apple Music**， 集成Apple Music
 
 
 
