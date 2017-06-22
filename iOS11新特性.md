@@ -19,6 +19,19 @@
 
 ![](images/file.png)
 
+## Core ML 
+支持层数超过30层的深度学习之外，还支持决策树的融合，SVM（支持向量机），线性模型。由于其底层建立在Metal 和Accelerate等技术上，所以可以最大限度的发挥CPU和GPU的优势。你可以在移动设备上运行机器学习模型
+
+[官网文档](https://developer.apple.com/documentation/coreml)
+
+
+### Vison
+这个是基于ML的，可以进行脸部追踪，识别，文字检测，二维码检测，物体识别
+
+[官网文档](https://developer.apple.com/documentation/vision)
+
+### Natural Language Processing
+包括语言识别，分词，词性还原，词性判定，实体辨识
 
 
 
