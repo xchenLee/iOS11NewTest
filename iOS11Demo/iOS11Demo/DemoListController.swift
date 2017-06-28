@@ -19,11 +19,16 @@ import UIKit
 class DemoListController: UITableViewController {
     
     let datas = [
-        "Core ML",
-        "New Camera",
+        ("Drag and Drop", "dad"),
+        ("UI Refinements", "largesearch"),
+        ("Advanced Animation", "animation"),
+        ("Round Corner", "corner"),
+        ("Password Auto-fill", "autofill"),
+        ("Core ML", "cml"),
+        ("New Camera", "")
     ]
     
-    var mutatingDatas = [String]()
+    var mutatingDatas = [(String, String)]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +39,7 @@ class DemoListController: UITableViewController {
         )
         self.navigationItem.rightBarButtonItem = rightBtnItem
         
-        self.mutatingDatas = Array(datas)
-        
+        self.mutatingDatas = Array(self.datas)
         // By default, this will return YES on iPad and NO on iPhone
         if #available(iOS 11.0, *) {
             self.tableView.dragInteractionEnabled = true
@@ -58,8 +62,9 @@ class DemoListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let (title, _) = self.mutatingDatas[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "democell", for: indexPath)
-        cell.textLabel?.text = self.datas[indexPath.row]
+        cell.textLabel?.text = title
         return cell
     }
     
@@ -123,13 +128,11 @@ class DemoListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let title = self.mutatingDatas[indexPath.row]
-        if title == "Core ML" {
-            
-            let cml =
-            UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "cml")
-            self.navigationController?.pushViewController(cml, animated: true)
-        }
+        let (_, identifierId) = self.mutatingDatas[indexPath.row]
+        
+        let controller =
+            UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: identifierId)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     // Override to support rearranging the table view.
@@ -159,7 +162,7 @@ class DemoListController: UITableViewController {
     
     // MARK - click event
     func resetList() {
-        self.mutatingDatas = Array(datas)
+        self.mutatingDatas = Array(self.datas)
         self.tableView.reloadData()
     }
 }

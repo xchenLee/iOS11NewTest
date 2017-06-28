@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9319CFE81EFB623B004E3903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319CFE71EFB623B004E3903 /* AppDelegate.swift */; };
-		9319CFEA1EFB623B004E3903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319CFE91EFB623B004E3903 /* ViewController.swift */; };
 		9319CFED1EFB623B004E3903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9319CFEB1EFB623B004E3903 /* Main.storyboard */; };
 		9319CFEF1EFB623B004E3903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9319CFEE1EFB623B004E3903 /* Assets.xcassets */; };
 		9319CFF21EFB623B004E3903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9319CFF01EFB623B004E3903 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,12 @@
 		934C0D631EFB65A80058D197 /* DemoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C0D621EFB65A80058D197 /* DemoListController.swift */; };
 		934C0D651EFB72680058D197 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 934C0D641EFB72680058D197 /* Resnet50.mlmodel */; };
 		934C0D691EFB77140058D197 /* CoreMLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C0D681EFB77140058D197 /* CoreMLController.swift */; };
+		93D3FF411F03548A008515FC /* DragAndDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF401F03548A008515FC /* DragAndDrop.swift */; };
+		93D3FF451F03604B008515FC /* LargeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF441F03604B008515FC /* LargeSearch.swift */; };
+		93D3FF471F037C0D008515FC /* PasswordAutoFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF461F037C0D008515FC /* PasswordAutoFill.swift */; };
+		93D3FF4A1F038E69008515FC /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF491F038E69008515FC /* RoundCorner.swift */; };
+		93D3FF4C1F039A52008515FC /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF4B1F039A52008515FC /* DemoCell.swift */; };
+		93D3FF4E1F03A2C7008515FC /* AdvancedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3FF4D1F03A2C7008515FC /* AdvancedAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,6 @@
 /* Begin PBXFileReference section */
 		9319CFE41EFB623B004E3903 /* iOS11Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS11Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9319CFE71EFB623B004E3903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9319CFE91EFB623B004E3903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9319CFEC1EFB623B004E3903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9319CFEE1EFB623B004E3903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9319CFF11EFB623B004E3903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,13 @@
 		934C0D621EFB65A80058D197 /* DemoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListController.swift; sourceTree = "<group>"; };
 		934C0D641EFB72680058D197 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		934C0D681EFB77140058D197 /* CoreMLController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLController.swift; sourceTree = "<group>"; };
+		93D3FF401F03548A008515FC /* DragAndDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDrop.swift; sourceTree = "<group>"; };
+		93D3FF441F03604B008515FC /* LargeSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSearch.swift; sourceTree = "<group>"; };
+		93D3FF461F037C0D008515FC /* PasswordAutoFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAutoFill.swift; sourceTree = "<group>"; };
+		93D3FF481F038627008515FC /* iOS11Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS11Demo.entitlements; sourceTree = "<group>"; };
+		93D3FF491F038E69008515FC /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
+		93D3FF4B1F039A52008515FC /* DemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
+		93D3FF4D1F03A2C7008515FC /* AdvancedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +114,21 @@
 		9319CFE61EFB623B004E3903 /* iOS11Demo */ = {
 			isa = PBXGroup;
 			children = (
+				93D3FF481F038627008515FC /* iOS11Demo.entitlements */,
 				934C0D641EFB72680058D197 /* Resnet50.mlmodel */,
 				9319CFE71EFB623B004E3903 /* AppDelegate.swift */,
-				9319CFE91EFB623B004E3903 /* ViewController.swift */,
+				934C0D621EFB65A80058D197 /* DemoListController.swift */,
 				9319CFEB1EFB623B004E3903 /* Main.storyboard */,
+				93D3FF4B1F039A52008515FC /* DemoCell.swift */,
+				93D3FF491F038E69008515FC /* RoundCorner.swift */,
 				9319CFEE1EFB623B004E3903 /* Assets.xcassets */,
 				9319CFF01EFB623B004E3903 /* LaunchScreen.storyboard */,
 				9319CFF31EFB623B004E3903 /* Info.plist */,
-				934C0D621EFB65A80058D197 /* DemoListController.swift */,
 				934C0D681EFB77140058D197 /* CoreMLController.swift */,
+				93D3FF401F03548A008515FC /* DragAndDrop.swift */,
+				93D3FF441F03604B008515FC /* LargeSearch.swift */,
+				93D3FF461F037C0D008515FC /* PasswordAutoFill.swift */,
+				93D3FF4D1F03A2C7008515FC /* AdvancedAnimation.swift */,
 			);
 			path = iOS11Demo;
 			sourceTree = "<group>";
@@ -204,6 +221,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 2Y5LXE247T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9319CFF71EFB623B004E3903 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -272,9 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				934C0D631EFB65A80058D197 /* DemoListController.swift in Sources */,
-				9319CFEA1EFB623B004E3903 /* ViewController.swift in Sources */,
+				93D3FF411F03548A008515FC /* DragAndDrop.swift in Sources */,
+				93D3FF4C1F039A52008515FC /* DemoCell.swift in Sources */,
 				934C0D651EFB72680058D197 /* Resnet50.mlmodel in Sources */,
+				93D3FF471F037C0D008515FC /* PasswordAutoFill.swift in Sources */,
 				9319CFE81EFB623B004E3903 /* AppDelegate.swift in Sources */,
+				93D3FF4A1F038E69008515FC /* RoundCorner.swift in Sources */,
+				93D3FF451F03604B008515FC /* LargeSearch.swift in Sources */,
+				93D3FF4E1F03A2C7008515FC /* AdvancedAnimation.swift in Sources */,
 				934C0D691EFB77140058D197 /* CoreMLController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS11Demo/iOS11Demo.entitlements;
 				DEVELOPMENT_TEAM = 2Y5LXE247T;
 				INFOPLIST_FILE = iOS11Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
@@ -443,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iOS11Demo/iOS11Demo.entitlements;
 				DEVELOPMENT_TEAM = 2Y5LXE247T;
 				INFOPLIST_FILE = iOS11Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
