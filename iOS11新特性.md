@@ -27,12 +27,14 @@
 
 
 ## File Management
-更新了iOS11系统之后，会发现手机多了一个叫文件的app，可用来展示本地文件和云盘文件，对于一些网盘app会比较好用，提供了一个系统级的Controller给你用，
+更新了iOS11系统之后，会发现手机多了一个叫文件的app，可用来展示本地文件和云盘文件，对于一些网盘app会比较好用，提供了一个系统级的Controller给你用，这个说是高度支持UI自定义
 
 > UIDocumentBrowserViewController
-
-`class UIDocumentBrowserViewController {   init(forOpeningFilesWithContentTypes: [String]?)  
-    var delegate: UIDocumentBrowserViewControllerDelegate?  }`
+> 
+> class UIDocumentBrowserViewController { 
+> init(forOpeningFilesWithContentTypes: [String]?)  
+> var delegate: UIDocumentBrowserViewControllerDelegate?  
+> }
     
     
 ## UI Refinements
@@ -41,7 +43,7 @@
 2. **UITableViewCell 增加了Swipe Action**
 
 
-## Advanced Animation with UIKit
+## session230：Advanced Animation with UIKit
 [session230](https://developer.apple.com/videos/play/wwdc2017/230/)这个session我专门从头看到尾了，就把笔记记下来，
 
 下面列一下我们做动画的几种方式
@@ -70,8 +72,48 @@
 
 5.UIViewPropertyAnimator in iOS11
 
-var scrubsLinearly: Bool
-var pausesOnCompletion: Bool
+`var scrubsLinearly: Bool`
+
+`var pausesOnCompletion: Bool`
+
+## session242:The Keys to a Better   Text Input Experience
+这个Session 主要讲了，如何提高输入体验，就是键盘相关的，我想大家如果用UITextfield，或者聊天相关的可能会需要注册键盘事件的广播，来调整布局，比如
+
+`UIKeyboardDidShow`
+
+`UIKeyboardDidHide `
+
+`UIKeyboardDidChangeFrame`
+
+这个session针对UITableView和UIScrollView，以及一些不能滑动的控件提出了好的编码建议
+
+一个是针对输入框，可以自动填写密码，
+
+
+## session245：Building Apps with Dynamic type
+
+
+这一篇主要讲的是iPhone为了一些特殊群体，比如老人，近视小孩，还有工作一天疲劳的白领等等，提出了大字模式，在设置里的
+Display & Brightness 里 改变字体大小。
+
+但是UI会变形，我看了一下系统app，基本都没有问题，只有react-native部分会有些问题，这里提到了适配
+iOS 为这些增加了一些API,这个session主要是几点
+
+*1.可变的Font sizes*
+
+*2.适配大字*
+
+*3.适配UITableView*
+
+*4.适配图片*
+
+下面是简单的对文字的缩放截图了几个，就是通过xib属性面板和代码都可以做到，之前写死的frame 大小，必须得改一下了。UITableView的，只要是做了auto-sizingCell，都会很好自己是配，Session最后还给了怎么给H5页面是配的方案，我这里不一一列举，就是大家以后如果遇到相关的需求，可以查阅一下这个session，
+
+![](images/large-text01.png)
+
+![](images/large-text03.png)
+
+![](images/large-text02.png)
 
 
 
