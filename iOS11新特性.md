@@ -1,16 +1,65 @@
+# Debug with xcode 9
+
+## wireless development
+主要是为了方便调试AppleTV ,home 一些东西，这样子你就能坐在沙发上远程调试
+
+最低的要求是：
+
+* iPhone, iPad, iPod touch running on iOS11
+* Apple TV running tvOS11
+* macOS 10.12.4+
+
+
+支持的工具：
+
+iOS / tbOS
+
+* Xcode
+* Instruments
+* Accessibility Inspector
+* Console
+* Configurator
+
+
+开启无线调试，在同一个局域网，第一次手机要插线, Window -> Devices and Simulators, 选择设备， 然后勾选 Connect via network
+
+![](images/wireless-device.png)
+
+
+断点调试的改进，
+
+* 断点调试增加了代码补全,在断点的conditions和action fields里面
+* 而且还多了个option indicator
+
+![](images/option-indicator.png)
+
+
+ViewController 调试改进
+
+就是查看view hierarchy的时候，如果层级有好几个viewController,我们可以单独看其中一个
+![](images/vc-debug.png)
+
+## session 405 GitHub and the New Source Control Workflows in Xcode 9
+
+同样可以添加服务器地址，我试了一下咱们的git服务器好像不行，就是可以在Preference里面输入git的账号
+
+![](images/git-login.png)
+
+然后重新打开Xcode，会有一个clone from 的选项，点击就会进入这个页面，可以搜索别的repo，或者下载这个
+![](images/git-repo.png)
+
+这个是创建分支，如果有两个分支，merge的选项就可以操作
+![](images/git-branch.png)
+
+还可以针对某个commit开始打tag
+![](images/git-tag.png)
+
+
+
 # What’s New in iOS 11
 
 
 > Your apps can now become more intelligent using the power of machine learning with Core ML. You can create incredible augmented reality experiences with ARKit. And you can deliver a more unified and immersive user experience with new multitasking features, including drag and drop for iPad, the new Files app, new camera APIs, new SiriKit domains, Apple Music integration, and more.
-
-上面这段话，是官网对iOS11新特性的总结：
-
-*  **CoreML**，机器学习库
-*  **ARKit**，增强现实
-*  **Drag and drop for iPad**，拖拽实现
-*  **New File app**， 文档app
-*  **Camera API update**， 新相机API
-*  **Apple Music**， 集成Apple Music
 
 
 
@@ -29,18 +78,32 @@
 ## File Management
 更新了iOS11系统之后，会发现手机多了一个叫文件的app，可用来展示本地文件和云盘文件，对于一些网盘app会比较好用，提供了一个系统级的Controller给你用，这个说是高度支持UI自定义
 
+下面的是UIKit提供的一个文件Controller
+
 > UIDocumentBrowserViewController
 > 
 > class UIDocumentBrowserViewController { 
+> 
 > init(forOpeningFilesWithContentTypes: [String]?)  
-> var delegate: UIDocumentBrowserViewControllerDelegate?  
+> var delegate: UIDocumentBrowserViewControllerDelegate? 
+>  
 > }
+
+
+关于这部分内容，大概有2个session在讲相关的内容，大家有兴趣可以看一下
+
+* Session 229, Building Great Document-based Apps in iOS 11
+* Session 243, File Provider Enhancements
+
+
+
     
     
 ## UI Refinements
 
-1. **UINavigationBar 增加了大字模式**
-2. **UITableViewCell 增加了Swipe Action**
+
+* UINavigationBar 增加了大字模式
+* UITableViewCell 增加了Swipe Action
 
 
 ## session230：Advanced Animation with UIKit
@@ -92,32 +155,46 @@
 
 ## session245：Building Apps with Dynamic type
 
-
 这一篇主要讲的是iPhone为了一些特殊群体，比如老人，近视小孩，还有工作一天疲劳的白领等等，提出了大字模式，在设置里的
 Display & Brightness 里 改变字体大小。
 
 但是UI会变形，我看了一下系统app，基本都没有问题，只有react-native部分会有些问题，这里提到了适配
 iOS 为这些增加了一些API,这个session主要是几点
 
-*1.可变的Font sizes*
-
-*2.适配大字*
-
-*3.适配UITableView*
-
-*4.适配图片*
+* 可变的Font sizes
+* 适配大字
+* 适配UITableView
+* 适配图片
 
 下面是简单的对文字的缩放截图了几个，就是通过xib属性面板和代码都可以做到，之前写死的frame 大小，必须得改一下了。UITableView的，只要是做了auto-sizingCell，都会很好自己是配，Session最后还给了怎么给H5页面是配的方案，我这里不一一列举，就是大家以后如果遇到相关的需求，可以查阅一下这个session，
 
 ![](images/large-text01.png)
-
 ![](images/large-text03.png)
-
 ![](images/large-text02.png)
+![](images/large-text04.jpg)
+
+> 对于在大字模式下，H5页面，session提到的有给前端同学使用的相关的解决方案
 
 
+## session401 Localizing with Xcode 9
+因为咱们项目有海外版，我就大概扫了一眼这个Session, 这个session主要是三点
 
+* 字符串管理
+* 格式化，就是DateFormatter之类的
+* UI相关的
 
+常用的API 大家应该比较熟了，就是不带参数的和需要带一些参数的API，这连个方法
+
+* NSLocalizedString
+* localizedStringWithFormat
+
+这里特别提到了日期的格式化，这个中英文我记得好像是没问题，但是有些国家的语言会有问题
+
+![](images/formatter.png)
+![](images/formatter01.png)
+![](images/formatter02.png)
+
+还有一个国际化的新特性，就是可以创建字符串文件管理之类的，没怎么看懂，有兴趣的可以自己看一下
 
 
 ## Core ML 
