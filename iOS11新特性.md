@@ -1,6 +1,12 @@
 # Debug with xcode 9
 
+## new simulator
+![](images/simulator.png)
+
+
 ## wireless development
+
+
 主要是为了方便调试AppleTV ,home 一些东西，这样子你就能坐在沙发上远程调试
 
 最低的要求是：
@@ -54,6 +60,26 @@ ViewController 调试改进
 还可以针对某个commit开始打tag
 ![](images/git-tag.png)
 
+## session401 Localizing with Xcode 9
+因为咱们项目有海外版，我就大概扫了一眼这个Session, 这个session主要是三点
+
+* 字符串管理
+* 格式化，就是DateFormatter之类的
+* UI相关的
+
+常用的API 大家应该比较熟了，就是不带参数的和需要带一些参数的API，这连个方法
+
+* NSLocalizedString
+* localizedStringWithFormat
+
+这里特别提到了日期的格式化，这个中英文我记得好像是没问题，但是有些国家的语言会有问题
+
+![](images/formatter.png)
+![](images/formatter01.png)
+![](images/formatter02.png)
+
+还有一个国际化的新特性，就是可以创建字符串文件管理之类的，没怎么看懂，有兴趣的可以自己看一下
+
 
 
 # What’s New in iOS 11
@@ -96,61 +122,15 @@ ViewController 调试改进
 * Session 243, File Provider Enhancements
 
 
-
     
     
 ## UI Refinements
 
-
 * UINavigationBar 增加了大字模式
 * UITableViewCell 增加了Swipe Action
 
+> 关于大字模式，有个Session245，是讲如何对你的App的UI布局进行适配的，不过，如果你的app不想支持这种动态字体模式，其实是没有问题的，但是如果有webview相关的会有些问题。
 
-## session230：Advanced Animation with UIKit
-[session230](https://developer.apple.com/videos/play/wwdc2017/230/)这个session我专门从头看到尾了，就把笔记记下来，
-
-下面列一下我们做动画的几种方式
-
-1.UIView-based Animations
-
-这种动画，我们基本不能怎么控制，一句话就直接开始了
-
-2.UIViewPropertyAnimator
-
-这种动画，我们可以控制它什么时候开始，也能控制时间函数，session里着重讲了timing的集中方式linear, easeIn, easeOut
-
-* Custom timing
-* Interactive 
-* Interrupible
-* Responsive
-
-3.Interactively animating
-
-这里用了控制中心的小控件做例子，比如加上UIPangesture，这里加了手势，来控制动画
-我们可以Pause ，Continue
-
-4.Interruptible Animations
-
-这里举了个例子就是Mobile Safari，用户滑动页面
-
-5.UIViewPropertyAnimator in iOS11
-
-`var scrubsLinearly: Bool`
-
-`var pausesOnCompletion: Bool`
-
-## session242:The Keys to a Better   Text Input Experience
-这个Session 主要讲了，如何提高输入体验，就是键盘相关的，我想大家如果用UITextfield，或者聊天相关的可能会需要注册键盘事件的广播，来调整布局，比如
-
-`UIKeyboardDidShow`
-
-`UIKeyboardDidHide `
-
-`UIKeyboardDidChangeFrame`
-
-这个session针对UITableView和UIScrollView，以及一些不能滑动的控件提出了好的编码建议
-
-一个是针对输入框，可以自动填写密码，
 
 
 ## session245：Building Apps with Dynamic type
@@ -176,25 +156,52 @@ iOS 为这些增加了一些API,这个session主要是几点
 > 对于在大字模式下，H5页面，session提到的有给前端同学使用的相关的解决方案
 
 
-## session401 Localizing with Xcode 9
-因为咱们项目有海外版，我就大概扫了一眼这个Session, 这个session主要是三点
 
-* 字符串管理
-* 格式化，就是DateFormatter之类的
-* UI相关的
+## session230：Advanced Animation with UIKit
+[session230](https://developer.apple.com/videos/play/wwdc2017/230/)
 
-常用的API 大家应该比较熟了，就是不带参数的和需要带一些参数的API，这连个方法
+这个Session主要讲如何些动画
 
-* NSLocalizedString
-* localizedStringWithFormat
 
-这里特别提到了日期的格式化，这个中英文我记得好像是没问题，但是有些国家的语言会有问题
+1.UIView-based Animations（不可控制过程的动画）
 
-![](images/formatter.png)
-![](images/formatter01.png)
-![](images/formatter02.png)
+2.UIViewPropertyAnimator （高度可控动画）
 
-还有一个国际化的新特性，就是可以创建字符串文件管理之类的，没怎么看懂，有兴趣的可以自己看一下
+Sesion中列举了这个动画的优点，下面四点
+
+* Custom timing
+* Interactive 
+* Interrupible
+* Responsive
+
+配合UIPanGesture，可以做出来交互性很强的动画。以及，UIViewPropertyAnimator in **iOS11** 新增加的两个属性，提高了动画的体验
+
+//这个属性，名字就是擦洗，擦掉，如果开启，就会根据动画的时间，慢慢的消失掉，擦掉
+
+**var scrubsLinearly: Bool**
+
+//这个属性，就是可以让动画在结束的时候，处在一个开始状态，可以重新再使用
+
+**var pausesOnCompletion: Bool**
+
+
+
+
+## session242:The Keys to a Better   Text Input Experience
+这个Session 主要讲了，如何提高输入体验，就是键盘相关的，我想大家如果用UITextfield，或者聊天相关的可能会需要注册键盘事件的广播，来调整布局，比如
+
+`UIKeyboardDidShow`
+
+`UIKeyboardDidHide `
+
+`UIKeyboardDidChangeFrame`
+
+这个session针对UITableView和UIScrollView，以及一些不能滑动的控件提出了好的编码建议
+
+一个是针对输入框，可以自动填写密码，
+
+
+
 
 
 ## Core ML 
