@@ -1,10 +1,17 @@
-# Debug with xcode 9
+# What’s New in iOS 11
 
-## new simulator
+
+> Your apps can now become more intelligent using the power of machine learning with Core ML. You can create incredible augmented reality experiences with ARKit. And you can deliver a more unified and immersive user experience with new multitasking features, including drag and drop for iPad, the new Files app, new camera APIs, new SiriKit domains, Apple Music integration, and more.
+
+
+
+## Session 404: Debug with xcode 9
+
+### new simulator
 ![](images/simulator.png)
 
 
-## wireless development
+### wireless development
 
 
 主要是为了方便调试AppleTV ,home 一些东西，这样子你就能坐在沙发上远程调试
@@ -45,7 +52,7 @@ ViewController 调试改进
 就是查看view hierarchy的时候，如果层级有好几个viewController,我们可以单独看其中一个
 ![](images/vc-debug.png)
 
-## session 405 GitHub and the New Source Control Workflows in Xcode 9
+## session 405: GitHub and the New Source Control Workflows in Xcode 9
 
 同样可以添加服务器地址，我试了一下咱们的git服务器好像不行，就是可以在Preference里面输入git的账号
 
@@ -60,17 +67,17 @@ ViewController 调试改进
 还可以针对某个commit开始打tag
 ![](images/git-tag.png)
 
-## session401 Localizing with Xcode 9
+## session401: Localizing with Xcode 9
 因为咱们项目有海外版，我就大概扫了一眼这个Session, 这个session主要是三点
 
 * 字符串管理
 * 格式化，就是DateFormatter之类的
-* UI相关的
+* UI相关的（**官方举例是如果你在xib,storyboard里面对字符串设置了固定宽高的话，Xcode会给你提示**）
 
 常用的API 大家应该比较熟了，就是不带参数的和需要带一些参数的API，这连个方法
 
 * NSLocalizedString
-* localizedStringWithFormat
+* LocalizedStringWithFormat
 
 这里特别提到了日期的格式化，这个中英文我记得好像是没问题，但是有些国家的语言会有问题
 
@@ -79,14 +86,6 @@ ViewController 调试改进
 ![](images/formatter02.png)
 
 还有一个国际化的新特性，就是可以创建字符串文件管理之类的，没怎么看懂，有兴趣的可以自己看一下
-
-
-
-# What’s New in iOS 11
-
-
-> Your apps can now become more intelligent using the power of machine learning with Core ML. You can create incredible augmented reality experiences with ARKit. And you can deliver a more unified and immersive user experience with new multitasking features, including drag and drop for iPad, the new Files app, new camera APIs, new SiriKit domains, Apple Music integration, and more.
-
 
 
 ## Drag and Drop
@@ -133,6 +132,7 @@ ViewController 调试改进
 
 
 
+
 ## session245：Building Apps with Dynamic type
 
 这一篇主要讲的是iPhone为了一些特殊群体，比如老人，近视小孩，还有工作一天疲劳的白领等等，提出了大字模式，在设置里的
@@ -160,7 +160,7 @@ iOS 为这些增加了一些API,这个session主要是几点
 ## session230：Advanced Animation with UIKit
 [session230](https://developer.apple.com/videos/play/wwdc2017/230/)
 
-这个Session主要讲如何些动画
+这个Session主要讲动画类的更新，添加了两个属性，使得动画过程更加可控，大家如果需要写一些交互性的动画，可以看一下这个session.
 
 
 1.UIView-based Animations（不可控制过程的动画）
@@ -185,6 +185,27 @@ Sesion中列举了这个动画的优点，下面四点
 **var pausesOnCompletion: Bool**
 
 
+## session220: Customized Loading in WKWebView
+
+* 更好的cookie管理机制
+* 过滤网页内容
+* 对加载的内容可控性更高
+* Provide Custom Resources（**没有细看，是可以定义一些 custom schemes**）
+
+之前的项目用WKWebView访问网站，需要种cookie，当时是没有合适的方法，只是通过WKWebView加载网页请求的时候，塞到request 的HttpHeader里，也尝试在加载页面的时候，执行JS脚本写Cookie，iOS11提供了新的API
+
+
+
+![](images/wkcookie.png)
+
+
+
+## session241 Introducing PDFKit on iOS
+iOS11提供了PDFKit Framework这个库，更方便在移动端进行PDF文档的展示，下面是我从这个session的截图，大概介绍了一下这个库
+
+![](images/pdfkit.png)
+
+官方也提供了使用这个framework的[Guide](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/PDFKitGuide/PDFKit_Prog_Intro/PDFKit_Prog_Intro.html)
 
 
 ## session242:The Keys to a Better   Text Input Experience
@@ -202,8 +223,6 @@ Sesion中列举了这个动画的优点，下面四点
 
 
 
-
-
 ## Core ML 
 支持层数超过30层的深度学习之外，还支持决策树的融合，SVM（支持向量机），线性模型。由于其底层建立在Metal 和Accelerate等技术上，所以可以最大限度的发挥CPU和GPU的优势。你可以在移动设备上运行机器学习模型
 
@@ -217,3 +236,13 @@ Sesion中列举了这个动画的优点，下面四点
 
 ### Natural Language Processing
 包括语言识别，分词，词性还原，词性判定，实体辨识
+
+## ARKit
+
+## Session 402 What's new in swift
+
+## 参考资料
+[wwdc 2017](https://developer.apple.com/videos/wwdc2017/)
+
+###扩展阅读
+[你可能需要为你的 APP 适配 iOS 11](http://mp.weixin.qq.com/s/AZFrqL9dnlgA6Vt2sVhxIw)
