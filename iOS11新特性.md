@@ -198,9 +198,24 @@ Sesion中列举了这个动画的优点，下面四点
 
 ![](images/wkcookie.png)
 
+## Session412: Auto Layout Techniques in Interface Builder
+主要讲如何更好的用IB技术，iOS11多了一些技术
+
+**Safe Area**，取代了之前的topLayout, bottomLayout，在xib里需要自己开启
+
+![](images/safearea.png)
+![](images/safearea1.png)
+
+**Proportional Positioning** 
+
+![](images/proportion.png)
 
 
-## session241 Introducing PDFKit on iOS
+
+
+
+
+## session241: Introducing PDFKit on iOS
 iOS11提供了PDFKit Framework这个库，更方便在移动端进行PDF文档的展示，下面是我从这个session的截图，大概介绍了一下这个库
 
 ![](images/pdfkit.png)
@@ -242,7 +257,8 @@ iOS11提供了PDFKit Framework这个库，更方便在移动端进行PDF文档�
 ## Session 402 What's new in swift
 
 ## 参考资料
-[wwdc 2017](https://developer.apple.com/videos/wwdc2017/)
+[WWDC 2017](https://developer.apple.com/videos/wwdc2017/)
 
-###扩展阅读
+
+##扩展阅读
 [你可能需要为你的 APP 适配 iOS 11](http://mp.weixin.qq.com/s/AZFrqL9dnlgA6Vt2sVhxIw)
